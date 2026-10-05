@@ -1,0 +1,46 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+$route['default_controller'] = 'auth/login';
+$route['login'] = 'auth/login';
+$route['logout'] = 'auth/logout';
+$route['dashboard'] = 'dashboard/index';
+$route['projects'] = 'projects/index';
+$route['projects/create'] = 'projects/create';
+$route['projects/store'] = 'projects/store';
+$route['projects/view/(:num)'] = 'projects/view/$1';
+$route['projects/edit/(:num)'] = 'projects/edit/$1';
+$route['projects/update/(:num)'] = 'projects/update/$1';
+$route['projects/delete/(:num)'] = 'projects/delete/$1';
+$route['projects/print/(:num)'] = 'projects/print_project/$1';
+$route['approvals'] = 'approvals/index';
+$route['approvals/rejected'] = 'approvals/rejected';
+$route['approvals/history/(:num)'] = 'approvals/history/$1';
+$route['approvals/review/(:num)/(:num)'] = 'approvals/review/$1/$2';
+$route['approvals/action'] = 'approvals/action';
+$route['technical/review/(:num)/(:num)'] = 'technical/review/$1/$2';
+$route['technical/save-review'] = 'technical/save_review';
+$route['admin/users'] = 'admin/users';
+$route['admin/users/add'] = 'admin/user_add';
+$route['admin/users/edit/(:num)'] = 'admin/user_edit/$1';
+$route['admin/users/delete/(:num)'] = 'admin/user_delete/$1';
+$route['admin/categories'] = 'admin/categories';
+$route['admin/categories/delete/(:num)'] = 'admin/category_delete/$1';
+$route['admin/departments'] = 'admin/departments';
+$route['admin/roles'] = 'admin/roles';
+$route['admin/roles/update/(:num)'] = 'admin/role_update/$1';
+$route['admin/roles/delete/(:num)'] = 'admin/role_delete/$1';
+$route['admin/departments/delete/(:num)'] = 'admin/department_delete/$1';
+$route['admin/workflows'] = 'admin/workflows';
+$route['workflows'] = 'workflows/index';
+$route['workflows/add'] = 'workflows/add';
+$route['workflows/update/(:num)'] = 'workflows/update/$1';
+$route['workflows/reorder/(:num)/(up|down)'] = 'workflows/reorder/$1/$2';
+$route['workflows/delete/(:num)'] = 'workflows/delete/$1';
+
+$route['404_override'] = '';
+$route['translate_uri_dashes'] = FALSE;
+
+$route['admin/category-assignments'] = 'admin/category_assignments';
+$route['admin/category-assignments/delete/(:num)/(:num)'] = 'admin/category_assignment_delete/$1/$2';
+$route['admin/teams'] = 'admin/teams';
+$route['admin/teams/delete/(:num)'] = 'admin/team_delete/$1';
